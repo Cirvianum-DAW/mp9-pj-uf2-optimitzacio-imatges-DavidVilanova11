@@ -3,20 +3,20 @@ const fs = require('fs');
 
 const imagesToOptimize = [
   {
-    input: 'MP9_UF1_tailwind-project/src/optimizeImages.js',
-    output: './src/img/cafe/pexels-pratik-gupta-2748538_optimized.webp',
+    input: '/Users/daw25/projectem9uf2/MP9_UF1_tailwind-project/Public/img/wine1.png',
+    output: '/Users/daw25/projectem9uf2/MP9_UF1_tailwind-project/Public/img/wine1_optimized.webp',
   },
   {
-    input: './src/img/cafe/pexels-valeriia-miller-3020919.jpg',
-    output: './src/img/cafe/pexels-valeriia-miller-3020919_optimized.jpg',
+    input: '/Users/daw25/projectem9uf2/MP9_UF1_tailwind-project/Public/img/wine2.png',
+    output: '/Users/daw25/projectem9uf2/MP9_UF1_tailwind-project/Public/img/wine2.png_optimized.webp',
   },
   {
-    input: './src/img/cafe/04BBF290-02E4-4D86-8BE1-DF0C4F105472.jpeg',
-    output: './src/img/cafe/04BBF290-02E4-4D86-8BE1-DF0C4F105472_optimitzed.webp',
+    input: '/Users/daw25/projectem9uf2/MP9_UF1_tailwind-project/Public/img/wine3.png',
+    output: '/Users/daw25/projectem9uf2/MP9_UF1_tailwind-project/Public/img/wine3_optimized.webp',
   },
   {
-    input: './src/img/cafe/pexels-karolina-grabowska-4226806.jpg',
-    output:'./src/img/cafe/pexels-karolina-grabowska-4226806_optimitzed.jpg',
+    input: '/Users/daw25/projectem9uf2/MP9_UF1_tailwind-project/Public/img/wine4.png',
+    output:'/Users/daw25/projectem9uf2/MP9_UF1_tailwind-project/Public/img/wine4_optimized.webp',
   }
 ];
 
