@@ -21,13 +21,20 @@
             </picture>
             <!-- Center h1 -->
             <h1 class="text-2xl font-bold flex items-center justify-center w-full">Productes</h1>
+            <nav>
+                <div id="burger-icon" class="hidden sm:block">&#9776;</div>
+
+                <ul id="header-links" class="flex space-x-4">
+                  <!-- Los enlaces del header se agregarán o quitarán dinámicamente aquí -->
+                </ul>
+              </nav>
         </header>
 
         <!-- Container for Aside and Central Content -->
-        <div class="flex flex-1">
+        <div id="container"class="flex flex-1">
 
             <!-- Aside (left) below the header -->
-            <aside class="bg-gray-800 text-white w-1/6 p-4">
+            <aside id="aside" class="bg-gray-800 text-white w-1/6 p-4">
                 <!-- Lista (caja de texto con diferentes opciones) -->
                 <div class="mb-4">
                     <label for="categories" class="text-gray-400 block mb-2">Categories</label>
@@ -166,18 +173,18 @@
         container.classList.add('flex-col');
         // Añadir los enlaces al header
         headerLinks.innerHTML = `
-          <li>
-            <a href="#" class="text-gray-800 hover:text-gray-600">Home (actual)</a>
-          </li>
-          <li>
-            <a href="productes.html" class="text-gray-800 hover:text-gray-600">Productes</a>
-          </li>
-          <li>
-            <a href="#" class="text-gray-800 hover:text-gray-600">Qui sóm?</a>
-          </li>
-          <li>
-            <a href="#" class="text-gray-800 hover:text-gray-600">Enllaços</a>
-          </li>
+                    <li class="mb-2">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" >Productes (actual)</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="quisom.html">Qui sóm?</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="enllaços.html">Enllaços</a>
+                    </li>
         `;
       } else {
         // Pantallas grandes
@@ -189,6 +196,21 @@
         headerLinks.innerHTML = '';
       }
     }
+
+// Get references to the burger icon and the menu
+const burgerIcon = document.getElementById('burger-icon');
+const menu = document.getElementById('header-links');
+
+// Add event listener to the burger icon
+burgerIcon.addEventListener('click', () => {
+    // Toggle the visibility of the menu
+    if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'block';
+    } else {
+        menu.style.display = 'none';
+    }
+});
+
 
     window.addEventListener('load', toggleElements);
     window.addEventListener('resize', toggleElements);
