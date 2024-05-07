@@ -22,7 +22,7 @@
             <!-- Center h1 -->
             <h1 class="text-2xl font-bold flex items-center justify-center w-full">Productes</h1>
             <nav>
-                <div id="burger-icon" class="hidden sm:block">&#9776;</div>
+                <div id="burger-icon" class="text-4xl">&#9776;</div>
 
                 <ul id="header-links" class="flex space-x-4">
                   <!-- Los enlaces del header se agregarán o quitarán dinámicamente aquí -->
@@ -186,7 +186,11 @@
                         <a href="enllaços.html">Enllaços</a>
                     </li>
         `;
+        burgerIcon.style.display = 'block';
+
       } else {
+        // Hide burger icon
+        burgerIcon.style.display = 'none';
         // Pantallas grandes
         aside.style.display = 'block';
         // header.style.display = 'none';
@@ -194,6 +198,7 @@
         container.classList.add('flex-row');
         // Quitar los enlaces del header
         headerLinks.innerHTML = '';
+        
       }
     }
 
@@ -209,6 +214,7 @@ burgerIcon.addEventListener('click', () => {
     } else {
         menu.style.display = 'none';
     }
+   
 });
 
 
