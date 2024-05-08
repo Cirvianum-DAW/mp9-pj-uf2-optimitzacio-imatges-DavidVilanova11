@@ -37,16 +37,16 @@
             <aside id="aside" class="bg-gray-800 text-white w-40 p-4 fixed h-full">
                 <ul>
                     <li class="mb-2">
-                        <a href="#" class="block p-2 bg-gray-600 rounded">Home</a>
+                        <a href="index.html" class="block p-2 bg-gray-600 rounded">Home</a>
                     </li>
                     <li class="mb-2">
                         <a href="productes.html" class="block p-2 bg-gray-600 rounded">Productes</a>
                     </li>
                     <li class="mb-2">
-                        <a href="#" class="block p-2 bg-gray-600 rounded">Qui sóm?</a>
+                        <a href="quisom.html" class="block p-2 bg-gray-600 rounded">Qui sóm?</a>
                     </li>
                     <li class="mb-2">
-                        <a href="#" class="block p-2 bg-gray-600 rounded">Enllaços (actual)</a>
+                        <a href="enllaços.html" class="block p-2 bg-gray-600 rounded">Enllaços (actual)</a>
                     </li>
                 </ul>
             </aside>
@@ -75,30 +75,17 @@
             function toggleElements() {
               const aside = document.getElementById('aside');
               const header = document.getElementById('header');
-              const container = document.getElementById('container');
+              // const container = document.getElementById('container');
               const headerLinks = document.getElementById('header-links');
               
               if (window.innerWidth < 640) {
                 // Pantallas pequeñas
                 aside.style.display = 'none';
                 header.style.display = 'flex';
-                container.classList.remove('flex-row');
-                container.classList.add('flex-col');
+                // container.classList.remove('flex-row');
+                // container.classList.add('flex-col');
                 // Añadir los enlaces al header
-                headerLinks.innerHTML = `
-                  <li>
-                    <a href="home.html" class="text-gray-800 hover:text-gray-600">Home (actual)</a>
-                  </li>
-                  <li>
-                    <a href="productes.html" class="text-gray-800 hover:text-gray-600">Productes</a>
-                  </li>
-                  <li>
-                    <a href="quisom.html" class="text-gray-800 hover:text-gray-600">Qui sóm?</a>
-                  </li>
-                  <li>
-                    <a href="enllaços.html" class="text-gray-800 hover:text-gray-600">Enllaços</a>
-                  </li>
-                `;
+
                 burgerIcon.style.display = 'block';
     
     } else {
@@ -123,6 +110,20 @@
     burgerIcon.addEventListener('click', () => {
     // Toggle the visibility of the menu
     if (menu.style.display === 'none' || menu.style.display === '') {
+      menu.innerHTML = `
+                  <li>
+                    <a href="home.html" class="text-gray-800 hover:text-gray-600">Home (actual)</a>
+                  </li>
+                  <li>
+                    <a href="productes.html" class="text-gray-800 hover:text-gray-600">Productes</a>
+                  </li>
+                  <li>
+                    <a href="quisom.html" class="text-gray-800 hover:text-gray-600">Qui sóm?</a>
+                  </li>
+                  <li>
+                    <a href="enllaços.html" class="text-gray-800 hover:text-gray-600">Enllaços</a>
+                  </li>
+                `;
       menu.style.display = 'block';
     } else {
       menu.style.display = 'none';
