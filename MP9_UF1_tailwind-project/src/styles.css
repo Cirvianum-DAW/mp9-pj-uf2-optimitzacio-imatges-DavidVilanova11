@@ -23,3 +23,16 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+@media (max-width: 639px) {
+    .bg-primary {
+      background-image: url('../Public/img/cropped_index_wallpaper.png'); /* Change to a different color */
+    }
+  }
+  
+  @media (min-width: 640px) {
+    .bg-primary {
+      /* Change the background image URL for larger viewports */
+      background-image: url('../Public/img/index_wallpaper (1).webp');
+    }
+}

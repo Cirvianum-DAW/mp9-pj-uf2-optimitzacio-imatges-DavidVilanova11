@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <!-- Contenido principal -->
@@ -50,7 +51,7 @@
         </aside>
 
         <!-- Contenido central con imagen de fondo -->
-        <section class="flex-1 bg-cover bg-center md:min-h-screen" style="background-image: url('../Public/img/index_wallpaper (1).webp');">
+        <section class="flex-1 bg-cover bg-center md:min-h-screen bg-primary">
           <!-- Puedes añadir más contenido aquí -->
         </section>
 
@@ -70,20 +71,7 @@
             container.classList.remove('flex-row');
             container.classList.add('flex-col');
             // Añadir los enlaces al header
-            headerLinks.innerHTML = `
-              <li>
-                <a href="home.html" class="text-gray-800 hover:text-gray-600">Home (actual)</a>
-              </li>
-              <li>
-                <a href="productes.html" class="text-gray-800 hover:text-gray-600">Productes</a>
-              </li>
-              <li>
-                <a href="quisom.html" class="text-gray-800 hover:text-gray-600">Qui sóm?</a>
-              </li>
-              <li>
-                <a href="enllaços.html" class="text-gray-800 hover:text-gray-600">Enllaços</a>
-              </li>
-            `;
+
             burgerIcon.style.display = 'block';
 
 } else {
@@ -108,9 +96,24 @@ const menu = document.getElementById('header-links');
 burgerIcon.addEventListener('click', () => {
 // Toggle the visibility of the menu
 if (menu.style.display === 'none' || menu.style.display === '') {
+  menu.innerHTML = `
+              <li>
+                <a href="home.html" class="text-gray-800 hover:text-gray-600">Home (actual)</a>
+              </li>
+              <li>
+                <a href="productes.html" class="text-gray-800 hover:text-gray-600">Productes</a>
+              </li>
+              <li>
+                <a href="quisom.html" class="text-gray-800 hover:text-gray-600">Qui sóm?</a>
+              </li>
+              <li>
+                <a href="enllaços.html" class="text-gray-800 hover:text-gray-600">Enllaços</a>
+              </li>
+            `;
   menu.style.display = 'block';
 } else {
   menu.style.display = 'none';
+  
 }
 
 });
