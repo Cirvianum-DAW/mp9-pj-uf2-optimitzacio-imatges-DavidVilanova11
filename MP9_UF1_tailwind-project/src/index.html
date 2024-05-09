@@ -6,6 +6,7 @@
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
   </head>
   <body>
     <!-- Contenido principal -->
@@ -53,10 +54,14 @@
 
         <!-- Contenido central con imagen de fondo -->
         <section class="flex-1 bg-cover bg-center md:min-h-screen bg-primary">
+          <img src="https://wrestlingheadlines.com/wp-content/uploads/2021/05/ROH-2-1140x570.jpeg" alt="World's Best" class="clip-image float-end m-6">
           <!-- Puedes añadir más contenido aquí -->
         </section>
 
+
       </div>
+
+      </main>
 
 
     <!-- Footer -->
@@ -74,15 +79,15 @@
         function toggleElements() {
           const aside = document.getElementById('aside');
           const header = document.getElementById('header');
-          const container = document.getElementById('container');
+          // const container = document.getElementById('container');
           const headerLinks = document.getElementById('header-links');
           
           if (window.innerWidth < 640) {
             // Pantallas pequeñas
             aside.style.display = 'none';
             header.style.display = 'flex';
-            container.classList.remove('flex-row');
-            container.classList.add('flex-col');
+            // container.classList.remove('flex-row');
+            // container.classList.add('flex-col');
             // Añadir los enlaces al header
 
             burgerIcon.style.display = 'block';
@@ -93,8 +98,8 @@
   // Pantallas grandes
   aside.style.display = 'block';
   // header.style.display = 'none';
-  container.classList.remove('flex-col');
-  container.classList.add('flex-row');
+  // container.classList.remove('flex-col');
+  // container.classList.add('flex-row');
   // Quitar los enlaces del header
   headerLinks.innerHTML = '';
   
@@ -154,6 +159,5 @@ window.onload = setBackgroundImage;
 window.onresize = setBackgroundImage;
 
 </script>
-    </main>
   </body>
 </html>

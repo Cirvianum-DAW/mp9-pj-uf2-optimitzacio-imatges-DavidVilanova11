@@ -35,4 +35,11 @@
       /* Change the background image URL for larger viewports */
       background-image: url('../Public/img/index_wallpaper (1).webp');
     }
+  }
+
+  .clip-image {
+    width: 12vw; /* Set your desired width */
+    height: 12vw; /* Set your desired height */
+    object-fit: cover; /* Ensure the image covers the entire space */
+    clip-path: circle(50%); /* Apply circular clipping */
 }
