@@ -174,15 +174,15 @@
     function toggleElements() {
       const aside = document.getElementById('aside');
       const header = document.getElementById('header');
-      const container = document.getElementById('container');
+    //   const container = document.getElementById('container');
       const headerLinks = document.getElementById('header-links');
       
       if (window.innerWidth < 640) {
         // Pantallas pequeñas
         aside.style.display = 'none';
         header.style.display = 'flex';
-        container.classList.remove('flex-row');
-        container.classList.add('flex-col');
+        // container.classList.remove('flex-row');
+        // container.classList.add('flex-col');
         // Añadir los enlaces al header
         headerLinks.innerHTML = `
                     <li class="mb-2">
@@ -206,8 +206,8 @@
         // Pantallas grandes
         aside.style.display = 'block';
         // header.style.display = 'none';
-        container.classList.remove('flex-col');
-        container.classList.add('flex-row');
+        // container.classList.remove('flex-col');
+        // container.classList.add('flex-row');
         // Quitar los enlaces del header
         headerLinks.innerHTML = '';
         
