@@ -23,8 +23,9 @@
             <h1 class="text-2xl font-bold flex items-center justify-center w-full">Enllaços</h1>
 
             <nav>
-                <div id="burger-icon" class="text-4xl">&#9776;</div>
-                <ul id="header-links" class="flex space-x-4">
+                <div id="burger-icon" class="text-4xl cursor-pointer">&#9776;</div>
+                <ul id="header-links" class="flex space
+                -x-4">
                   <!-- Los enlaces del header se agregarán o quitarán dinámicamente aquí -->
                 </ul>
             </nav>
@@ -37,22 +38,22 @@
             <aside id="aside" class="bg-gray-800 text-white w-40 p-4 fixed h-full">
                 <ul>
                     <li class="mb-2">
-                        <a href="#" class="block p-2 bg-gray-600 rounded">Home</a>
+                        <a href="index.html" class="block p-2 bg-gray-600 rounded">Home</a>
                     </li>
                     <li class="mb-2">
                         <a href="productes.html" class="block p-2 bg-gray-600 rounded">Productes</a>
                     </li>
                     <li class="mb-2">
-                        <a href="#" class="block p-2 bg-gray-600 rounded">Qui sóm?</a>
+                        <a href="quisom.html" class="block p-2 bg-gray-600 rounded">Qui sóm?</a>
                     </li>
                     <li class="mb-2">
-                        <a href="#" class="block p-2 bg-gray-600 rounded">Enllaços (actual)</a>
+                        <a href="enllaços.html" class="block p-2 bg-gray-600 rounded">Enllaços (actual)</a>
                     </li>
                 </ul>
             </aside>
 
             <!-- Contenido principal -->
-            <div class="flex flex-col flex-1 md:pl-52 pr-2">
+            <div class="flex flex-col flex-1 md:pl-52 p-2">
                 <h1 class="text-3xl font-bold mb-4">Non-commercial Links</h1>
 
                 <!-- Link 1 -->
@@ -65,40 +66,44 @@
                 <a href="https://www.lavozdegalicia.es/noticia/sociedad/2014/06/12/nasa-disena-nave-similar-star-trek-realizar-viajes-interestelares-futuro/00031402588413925294935.htm"
                     target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">https://www.lavozdegalicia.es/noticia/sociedad/2014/06/12/nasa-disena-nave-similar-star-trek-realizar-viajes-interestelares-futuro/00031402588413925294935.htm</a>
 
+
+                    <p class="mt-4 mb-2">World's Best:</p>
+                <a href="https://wrestlingheadlines.com/tickets-for-roh-best-in-the-world-now-available/"
+                    target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">https://wrestlingheadlines.com/tickets-for-roh-best-in-the-world-now-available/</a>
+
                 <!-- Disclaimer -->
                 <p class="mt-8 text-gray-500">Please note that these links are provided for non-commercial purposes
                     only.</p>
+                
+
             </div>
         </div>
+
+        <footer class="bg-gray-900 text-white text-left fixed text-xs bottom-0 w-full">
+          <ul class="flex space-x-8">
+              <li>© WineClub 2024.</li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="productes.html">Productes</a></li>
+              <li><a href="quisom.html">Qui sóm?</a></li>
+              <li><a href="enllaços.html">Enllaços</a></li>
+          </ul>
+      </footer>
 
         <script>
             function toggleElements() {
               const aside = document.getElementById('aside');
               const header = document.getElementById('header');
-              const container = document.getElementById('container');
+              // const container = document.getElementById('container');
               const headerLinks = document.getElementById('header-links');
               
               if (window.innerWidth < 640) {
                 // Pantallas pequeñas
                 aside.style.display = 'none';
                 header.style.display = 'flex';
-                container.classList.remove('flex-row');
-                container.classList.add('flex-col');
+                // container.classList.remove('flex-row');
+                // container.classList.add('flex-col');
                 // Añadir los enlaces al header
-                headerLinks.innerHTML = `
-                  <li>
-                    <a href="home.html" class="text-gray-800 hover:text-gray-600">Home (actual)</a>
-                  </li>
-                  <li>
-                    <a href="productes.html" class="text-gray-800 hover:text-gray-600">Productes</a>
-                  </li>
-                  <li>
-                    <a href="quisom.html" class="text-gray-800 hover:text-gray-600">Qui sóm?</a>
-                  </li>
-                  <li>
-                    <a href="enllaços.html" class="text-gray-800 hover:text-gray-600">Enllaços</a>
-                  </li>
-                `;
+
                 burgerIcon.style.display = 'block';
     
     } else {
@@ -123,6 +128,20 @@
     burgerIcon.addEventListener('click', () => {
     // Toggle the visibility of the menu
     if (menu.style.display === 'none' || menu.style.display === '') {
+      menu.innerHTML = `
+                  <li>
+                    <a href="home.html" class="text-gray-800 hover:text-gray-600">Home (actual)</a>
+                  </li>
+                  <li>
+                    <a href="productes.html" class="text-gray-800 hover:text-gray-600">Productes</a>
+                  </li>
+                  <li>
+                    <a href="quisom.html" class="text-gray-800 hover:text-gray-600">Qui sóm?</a>
+                  </li>
+                  <li>
+                    <a href="enllaços.html" class="text-gray-800 hover:text-gray-600">Enllaços</a>
+                  </li>
+                `;
       menu.style.display = 'block';
     } else {
       menu.style.display = 'none';

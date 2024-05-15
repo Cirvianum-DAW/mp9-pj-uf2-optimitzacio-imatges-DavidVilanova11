@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
   </head>
   <body>
     <!-- Contenido principal -->
@@ -14,7 +16,7 @@
       <header id="header" class="bg-gray-200 p-4 flex items-center justify-between w-full shrink-0">
         <!-- Logotipo a la izquierda -->
         <picture>
-          <img src="/Public/img/logo_final.svg" alt="Logo" class="pl-2  w-20 h-auto">
+          <img src="/Public/img/logo_final.svg" alt="Logo" class="animated-logo pl-2  w-20 h-auto">
         </picture>
         <!-- Links -->
         <h1 class="text-2xl font-bold flex items-center justify-center w-full">Home</h1>
@@ -22,7 +24,8 @@
 
           <div id="burger-icon" class="text-4xl">&#9776;</div>
 
-          <ul id="header-links" class="flex space-x-4">
+          <ul id="header-links" class="flex space
+          -x-4">
             <!-- Los enlaces del header se agregarán o quitarán dinámicamente aquí -->
           </ul>
         </nav>
@@ -35,55 +38,58 @@
         <aside id="aside" class="bg-gray-800 text-white w-1/6 p-4">
           <ul>
             <li class="mb-2">
-              <a href="#" class="block p-2 bg-gray-600 rounded">Home (actual)</a>
+              <a href="index.html" class="block p-2 bg-gray-600 rounded">Home (actual)</a>
             </li>
             <li class="mb-2">
               <a href="productes.html" class="block p-2 bg-gray-600 rounded">Productes</a>
             </li>
             <li class="mb-2">
-              <a href="#" class="block p-2 bg-gray-600 rounded">Qui sóm?</a>
+              <a href="quisom.html" class="block p-2 bg-gray-600 rounded">Qui sóm?</a>
             </li>
             <li class="mb-2">
-              <a href="#" class="block p-2 bg-gray-600 rounded">Enllaços</a>
+              <a href="enllaços.html" class="block p-2 bg-gray-600 rounded">Enllaços</a>
             </li>
           </ul>
         </aside>
 
         <!-- Contenido central con imagen de fondo -->
-        <section class="flex-1 bg-cover bg-center md:min-h-screen" style="background-image: url('../Public/img/index_wallpaper (1).webp');">
+        <section class="flex-1 bg-cover bg-center md:min-h-screen bg-primary">
+          <img src="https://wrestlingheadlines.com/wp-content/uploads/2021/05/ROH-2-1140x570.jpeg" alt="World's Best" class="clip-image float-end m-6">
           <!-- Puedes añadir más contenido aquí -->
         </section>
 
+
       </div>
+
+      </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-left fixed text-xs bottom-0 w-full">
+      <ul class="flex space-x-8">
+          <li>© WineClub 2024.</li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="productes.html">Productes</a></li>
+          <li><a href="quisom.html">Qui sóm?</a></li>
+          <li><a href="enllaços.html">Enllaços</a></li>
+      </ul>
+  </footer>
 
       <script>
         function toggleElements() {
           const aside = document.getElementById('aside');
           const header = document.getElementById('header');
-          const container = document.getElementById('container');
+          // const container = document.getElementById('container');
           const headerLinks = document.getElementById('header-links');
           
           if (window.innerWidth < 640) {
             // Pantallas pequeñas
             aside.style.display = 'none';
             header.style.display = 'flex';
-            container.classList.remove('flex-row');
-            container.classList.add('flex-col');
+            // container.classList.remove('flex-row');
+            // container.classList.add('flex-col');
             // Añadir los enlaces al header
-            headerLinks.innerHTML = `
-              <li>
-                <a href="home.html" class="text-gray-800 hover:text-gray-600">Home (actual)</a>
-              </li>
-              <li>
-                <a href="productes.html" class="text-gray-800 hover:text-gray-600">Productes</a>
-              </li>
-              <li>
-                <a href="quisom.html" class="text-gray-800 hover:text-gray-600">Qui sóm?</a>
-              </li>
-              <li>
-                <a href="enllaços.html" class="text-gray-800 hover:text-gray-600">Enllaços</a>
-              </li>
-            `;
+
             burgerIcon.style.display = 'block';
 
 } else {
@@ -92,8 +98,8 @@
   // Pantallas grandes
   aside.style.display = 'block';
   // header.style.display = 'none';
-  container.classList.remove('flex-col');
-  container.classList.add('flex-row');
+  // container.classList.remove('flex-col');
+  // container.classList.add('flex-row');
   // Quitar los enlaces del header
   headerLinks.innerHTML = '';
   
@@ -108,9 +114,24 @@ const menu = document.getElementById('header-links');
 burgerIcon.addEventListener('click', () => {
 // Toggle the visibility of the menu
 if (menu.style.display === 'none' || menu.style.display === '') {
+  menu.innerHTML = `
+              <li>
+                <a href="home.html" class="text-gray-800 hover:text-gray-600">Home (actual)</a>
+              </li>
+              <li>
+                <a href="productes.html" class="text-gray-800 hover:text-gray-600">Productes</a>
+              </li>
+              <li>
+                <a href="quisom.html" class="text-gray-800 hover:text-gray-600">Qui sóm?</a>
+              </li>
+              <li>
+                <a href="enllaços.html" class="text-gray-800 hover:text-gray-600">Enllaços</a>
+              </li>
+            `;
   menu.style.display = 'block';
 } else {
   menu.style.display = 'none';
+  
 }
 
 });
@@ -138,6 +159,5 @@ window.onload = setBackgroundImage;
 window.onresize = setBackgroundImage;
 
 </script>
-    </main>
   </body>
 </html>
